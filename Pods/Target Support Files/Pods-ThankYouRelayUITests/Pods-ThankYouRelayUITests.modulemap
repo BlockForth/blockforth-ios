@@ -1,0 +1,6 @@
+framework module Pods_ThankYouRelayUITests {
+  umbrella header "Pods-ThankYouRelayUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

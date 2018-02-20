@@ -7,8 +7,13 @@
 //
 
 import UIKit
+import BubbleTransition
 
-class ViewController: UIViewController {
+class TopViewController: UIViewController, UIViewControllerTransitioningDelegate {
+    
+    @IBOutlet weak var button: TransitionButton!
+    
+    let transition = BubbleTransition()
 
     override func viewDidLoad() {
         super.viewDidLoad()

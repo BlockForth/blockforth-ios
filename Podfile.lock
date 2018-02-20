@@ -1,0 +1,15 @@
+PODS:
+  - BubbleTransition (2.0.2)
+  - RAMAnimatedTabBarController (3.0.4)
+
+DEPENDENCIES:
+  - BubbleTransition
+  - RAMAnimatedTabBarController
+
+SPEC CHECKSUMS:
+  BubbleTransition: 7d98ed7d56f0940e83f350a98103ad473491c769
+  RAMAnimatedTabBarController: f4df798eb3f374b80448908d3a18586421efb8f6
+
+PODFILE CHECKSUM: dd727801e94b9475673038cc85eaf8ae21be440f
+
+COCOAPODS: 1.4.0
