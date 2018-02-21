@@ -40,32 +40,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDm-hT-8vG" customClass="TransitionButton" customModule="ThankYouRelay" customModuleProvider="target">
-                                <rect key="frame" x="152" y="509" width="70" height="69"/>
+                                <rect key="frame" x="152" y="508" width="70" height="70"/>
                                 <color key="backgroundColor" red="0.66896045209999999" green="0.23593088979999999" blue="0.2503652086" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="aQf-wZ-Nrc"/>
+                                    <constraint firstAttribute="height" constant="70" id="vJa-av-CLo"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.66896045209999999" green="0.23593088979999999" blue="0.2503652086" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Top">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="currentBackgroundColor">
-                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.66896045209999999" green="0.23593088979999999" blue="0.2503652086" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="35"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="aBT-kX-TSx" kind="show" id="83f-Ak-UD1"/>
+                                    <segue destination="aBT-kX-TSx" kind="modal" id="HcZ-ml-L6a"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="aDm-hT-8vG" firstAttribute="leading" secondItem="RQU-Fb-M1G" secondAttribute="leading" constant="152" id="9bK-He-iEB"/>
-                            <constraint firstItem="aDm-hT-8vG" firstAttribute="top" secondItem="RQU-Fb-M1G" secondAttribute="top" constant="489" id="MK0-8e-4A5"/>
-                            <constraint firstItem="RQU-Fb-M1G" firstAttribute="bottom" secondItem="aDm-hT-8vG" secondAttribute="bottom" constant="40" id="dLD-Dx-7jb"/>
-                            <constraint firstItem="aDm-hT-8vG" firstAttribute="centerX" secondItem="Tf2-gg-LV2" secondAttribute="centerX" id="fxa-mU-DWk"/>
+                            <constraint firstItem="RQU-Fb-M1G" firstAttribute="bottom" secondItem="aDm-hT-8vG" secondAttribute="bottom" constant="40" id="iWu-RJ-7Kh"/>
+                            <constraint firstItem="aDm-hT-8vG" firstAttribute="centerX" secondItem="Tf2-gg-LV2" secondAttribute="centerX" id="p0D-rv-wZX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RQU-Fb-M1G"/>
                     </view>
@@ -83,17 +85,21 @@
             </objects>
             <point key="canvasLocation" x="512.79999999999995" y="35.532233883058474"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="bO5-Bj-QOh">
             <objects>
-                <viewController id="aBT-kX-TSx" sceneMemberID="viewController">
+                <viewController id="aBT-kX-TSx" customClass="DetailViewController" customModule="ThankYouRelay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1rq-s6-Oc3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WAJ-a1-5MP" customClass="TransitionButton" customModule="ThankYouRelay" customModuleProvider="target">
-                                <rect key="frame" x="152" y="509" width="70" height="69"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WAJ-a1-5MP" customClass="TransitionButton" customModule="ThankYouRelay" customModuleProvider="target">
+                                <rect key="frame" x="152" y="507" width="70" height="70"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Ztb-G6-VVF"/>
+                                    <constraint firstAttribute="width" constant="70" id="pBL-cS-NaC"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="+">
@@ -107,17 +113,21 @@
                                         <real key="value" value="35"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="closeAction:" destination="aBT-kX-TSx" eventType="touchUpInside" id="JaH-xT-Nk4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.66896045209999999" green="0.23593088979999999" blue="0.2503652086" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="0hi-hF-ATB" firstAttribute="bottom" secondItem="WAJ-a1-5MP" secondAttribute="bottom" constant="40" id="1bF-4s-Q7g"/>
-                            <constraint firstItem="WAJ-a1-5MP" firstAttribute="centerX" secondItem="1rq-s6-Oc3" secondAttribute="centerX" id="G6L-ae-mZ0"/>
-                            <constraint firstItem="WAJ-a1-5MP" firstAttribute="top" secondItem="0hi-hF-ATB" secondAttribute="top" constant="489" id="ivs-Xh-dcZ"/>
-                            <constraint firstItem="WAJ-a1-5MP" firstAttribute="leading" secondItem="0hi-hF-ATB" secondAttribute="leading" constant="152" id="sj9-Ma-kaW"/>
+                            <constraint firstItem="0hi-hF-ATB" firstAttribute="bottom" secondItem="WAJ-a1-5MP" secondAttribute="bottom" constant="90" id="GUj-Wf-TqH"/>
+                            <constraint firstItem="WAJ-a1-5MP" firstAttribute="centerX" secondItem="1rq-s6-Oc3" secondAttribute="centerX" id="eGL-QR-y4E"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0hi-hF-ATB"/>
                     </view>
+                    <connections>
+                        <outlet property="closeButton" destination="WAJ-a1-5MP" id="YlF-TK-sz0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qW2-8I-VgQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
